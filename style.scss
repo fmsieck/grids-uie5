@@ -37,6 +37,11 @@ li {
   text-align: center;
 }
 
+hr {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
 a:visited {
   color: rgb(0, 53, 107);
 }
@@ -125,8 +130,8 @@ button {
 }
 
 .meet__kenzie-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   margin-bottom: 2em;
 }
 
@@ -137,11 +142,16 @@ button {
 }
 
 .students-video {
+  margin-left: 10em;
+  margin-right: 10em;
   margin-bottom: 2em;
   display: flex;
   justify-content: space-around;
 }
 
+.footer-header {
+  margin-top: 2em;
+}
 /* BLOCKS ------------------------------------- */
 
 .hero iframe {
@@ -153,6 +163,11 @@ button {
 
 .hero-header {
   font-size: 2.5rem;
+}
+
+.hero h2 {
+  margin-right: 10em;
+  margin-left: 10em;
 }
 
 .meet__kenzie-header,
@@ -184,7 +199,8 @@ button {
   text-align: left;
 }
 
-.tour-button {
+.tour-button,
+.compare-btn {
   background-color: rgb(0, 53, 107);
   border-radius: 0.18em;
   color: rgb(243, 243, 243);
@@ -200,23 +216,14 @@ button {
 }
 
 .compare-btn {
-  background-color: rgb(0, 53, 107);
-  border-radius: 0.18em;
-  color: rgb(243, 243, 243);
   width: 10rem;
   margin-top: 2em;
-  text-align: center;
-  text-decoration: none;
-  &:hover {
-    opacity: 45%;
-  }
-  &:visited {
-    color: rgb(166, 255, 220);
-  }
 }
 
 .story-link {
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 4em;
 }
 
 .signup-form {
@@ -260,18 +267,15 @@ button {
 
 /* DESKTOP ------------------------------------ */
 
-// @media (min-width: 550px) {
-//   .meet__kenzie-wrapper {
-//     justify-content: space-around;
-//   }
-// }
 @media (min-width: 550px) {
   .testimonials__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
   .meet__kenzie-wrapper {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
   }
   .program__cards-wrapper {
     flex-direction: row;
@@ -285,5 +289,12 @@ button {
     justify-content: center;
     align-items: center;
     padding: 2em;
+  }
+}
+
+@media (min-width: 900px) {
+  .meet__kenzie-biotext {
+    margin-left: 15em;
+    margin-right: 15em;
   }
 }

@@ -38,6 +38,11 @@ li {
   text-align: center;
 }
 
+hr {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
 a:visited {
   color: #00356b;
 }
@@ -175,13 +180,10 @@ button {
 }
 
 .meet__kenzie-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   margin-bottom: 2em;
 }
 
@@ -192,12 +194,18 @@ button {
 }
 
 .students-video {
+  margin-left: 10em;
+  margin-right: 10em;
   margin-bottom: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.footer-header {
+  margin-top: 2em;
 }
 
 /* BLOCKS ------------------------------------- */
@@ -208,6 +216,11 @@ button {
 
 .hero-header {
   font-size: 2.5rem;
+}
+
+.hero h2 {
+  margin-right: 10em;
+  margin-left: 10em;
 }
 
 .meet__kenzie-header,
@@ -254,7 +267,8 @@ button {
   text-align: left;
 }
 
-.tour-button {
+.tour-button,
+.compare-btn {
   background-color: #00356b;
   border-radius: 0.18em;
   color: #f3f3f3;
@@ -263,34 +277,25 @@ button {
   text-decoration: none;
 }
 
-.tour-button:hover {
-  opacity: 45%;
-}
-
-.tour-button:visited {
-  color: #a6ffdc;
-}
-
-.compare-btn {
-  background-color: #00356b;
-  border-radius: 0.18em;
-  color: #f3f3f3;
-  width: 10rem;
-  margin-top: 2em;
-  text-align: center;
-  text-decoration: none;
-}
-
+.tour-button:hover,
 .compare-btn:hover {
   opacity: 45%;
 }
 
+.tour-button:visited,
 .compare-btn:visited {
   color: #a6ffdc;
 }
 
+.compare-btn {
+  width: 10rem;
+  margin-top: 2em;
+}
+
 .story-link {
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 4em;
 }
 
 .signup-form {
@@ -344,10 +349,12 @@ button {
         grid-template-columns: 1fr 1fr;
   }
   .meet__kenzie-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
   }
   .program__cards-wrapper {
     -webkit-box-orient: horizontal;
@@ -372,6 +379,13 @@ button {
         -ms-flex-align: center;
             align-items: center;
     padding: 2em;
+  }
+}
+
+@media (min-width: 900px) {
+  .meet__kenzie-biotext {
+    margin-left: 15em;
+    margin-right: 15em;
   }
 }
 /*# sourceMappingURL=style.css.map */
